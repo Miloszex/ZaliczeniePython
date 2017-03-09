@@ -5,10 +5,26 @@
 {% endblock %}
 
 {% block pageContent %}
+    <table class="table">
+    <thead>
+    <tr>
+        <th>Subject</th>
+        <th>Begin</th>
+        <th>End</th>
+        <th>Day</th>
+        <th>Sign</th>
+    </tr>
+    </thead>
     {% for subject in subjects %}
-        {{subject.subject.name}} {{subject.subject.begin_at}}
-        {{subject.subject.end_at}}-{{subject.subject.get_day_display}}<button id="mybtn" subjectId={{subject.id}} class="btn-danger subjectButton">Wypisz</button> <br>
+        <tbody>
+        <td>{{subject.subject.name}}</td>
+        <td>{{subject.subject.begin_at}}</td>
+        <td>{{subject.subject.end_at}}</td>
+        <td>{{subject.subject.get_day_display}}</td>
+        <td><button id="mybtn" subjectId={{subject.id}} class="btn-danger subjectButton">Wypisz</button> <br></td>
+        </tbody>
     {% endfor %}
+    </table>
         <script>
 
         $(document).ready(function () {

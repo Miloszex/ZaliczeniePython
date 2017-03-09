@@ -1,14 +1,30 @@
 {% extends 'base.html' %}
 
-
 {% block scripts %}
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block pageContent %}
+    <table class="table">
+    <thead>
+    <tr>
+        <th>Subject</th>
+        <th>Begin</th>
+        <th>End</th>
+        <th>Sign</th>
+    </tr>
+    </thead>
+
 {% for subject in subjects %}
-        {{ subject.name }} - {{ subject.begin_at }}:{{ subject.end_at }} <button class="btn-success subjectButton" day="friday" subjectId="{{ subject.id }}"> Zapisz </button><br>
+    <tbody>
+        <td>{{ subject.name }}</td>
+        <td>{{ subject.begin_at }}</td>
+        <td>{{ subject.end_at }}</td>
+        <td><button class="btn-success subjectButton" day="friday" subjectId="{{ subject.id }}"> Zapisz </button><br></td>
+    </tbody>
 {% endfor %}
+
+    </table>
     <script>
 
         $(document).ready(function () {
@@ -31,4 +47,3 @@
 
 </script>
 {% endblock %}
-

@@ -38,7 +38,6 @@ def signMe(request, subject_id):
     try:
         sign.user = user
         sign.subject = subject
-        sign.subject.space = sign.subject.space +1
     except IntegrityError:
         raise MultipleObjectsReturned
 
