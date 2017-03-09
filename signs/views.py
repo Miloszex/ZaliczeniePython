@@ -53,7 +53,6 @@ def mySigns(request):
 
 @login_required(login_url='/account/login/')
 def singMeOut(request, sign_id):
-    user = request.user
     sign = Sign.objects.all().filter(id=sign_id)
     sign.delete()
     return render(request, 'signs/sign_out.html', {'message': 'You have been signed out successfully'})
