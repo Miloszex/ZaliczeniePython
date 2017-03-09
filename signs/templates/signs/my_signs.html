@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block pageContent %}
+    {% for subject in subjects %}
+        {{subject.subject.name}} {{subject.subject.begin_at}}
+        {{subject.subject.end_at}}-{{subject.subject.get_day_display}}<button id="mybtn" subjectId={{subject.id}} class="btn-danger subjectButton">Wypisz</button> <br>
+    {% endfor %}
+        <script>
+
+        $(document).ready(function () {
+            $('.subjectButton').click(function(){
+                var subjectId = $(this).attr('subjectId');
+                $.ajax({
+                    url: 'http://localhost:8000/sign/signmeout/'+ subjectId
+                }).done(function(data){
+                    console.log('subject send');
+                    console.log('recived data: '+ JSON.stringify(data));
+                });
+
+            })
+        })
+
+
+</script>
+{% endblock %}

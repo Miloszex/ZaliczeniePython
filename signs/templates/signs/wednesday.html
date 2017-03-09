@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block pageContent %}
+{% for subject in subjects %}
+        {{ subject.name }} - {{ subject.begin_at }}:{{ subject.end_at }} <button class="btn-success subjectButton" day="wednesday" subjectId="{{ subject.id }}"> Zapisz </button><br>
+{% endfor %}
+    <script>
+
+        $(document).ready(function () {
+            $('.subjectButton').click(function(){
+                var day = $(this).attr('day');
+                var subjectId = $(this).attr('subjectId');
+
+                console.log('dzien: '+day+', id: '+subjectId)
+
+                $.ajax({
+                    url: 'http://localhost:8000/sign/'+day+'/signme/'+subjectId
+                }).done(function(data){
+                    console.log('subject send');
+                    console.log('recived data: '+ JSON.stringify(data));
+                });
+
+            })
+        })
+
+
+</script>
+{% endblock %}
