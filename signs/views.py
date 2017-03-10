@@ -38,10 +38,16 @@ def signMe(request, subject_id):
     try:
         sign.user = user
         sign.subject = subject
-    except IntegrityError:
-        raise MultipleObjectsReturned
+    except Exception:
+        raise Exception
+    finally:
+        if(subject.actual_space <= subject.space):
+            subject.actual_space = subject.actual_space + 1
+            subject.save()
+            sign.save()
+        else:
+            pass
 
-    sign.save()
     return render(request, 'signs/sign_success.html', {'message': 'Success!'})
 
 @login_required(login_url='/account/login/')

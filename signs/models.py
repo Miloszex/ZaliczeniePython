@@ -16,6 +16,7 @@ class Subject(models.Model):
     day = models.IntegerField(choices=DAY_CHOICE)
     begin_at = models.TimeField(blank=True)
     end_at = models.TimeField(blank=True)
+    actual_space = models.IntegerField(default=0)
     space = models.IntegerField(default=0)
 
     def __str__(self):

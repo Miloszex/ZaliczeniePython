@@ -49,6 +49,7 @@
         <th>Subject</th>
         <th>Begin</th>
         <th>End</th>
+        <th>Space</th>
         <th>Sign</th>
     </tr>
     </thead>
@@ -58,6 +59,7 @@
         <td>{{ subject.name }}</td>
         <td>{{ subject.begin_at }}</td>
         <td>{{ subject.end_at }}</td>
+        <td> {{ subject.actual_space }}/{{ subject.space }}</td>
         <td><button class="btn-success subjectButton" day="monday" subjectId="{{ subject.id }}"> Zapisz </button><br></td>
     </tbody>
 {% endfor %}
