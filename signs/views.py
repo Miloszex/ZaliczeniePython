@@ -41,7 +41,7 @@ def signMe(request, subject_id):
     except Exception:
         raise Exception
     finally:
-        if(subject.actual_space <= subject.space):
+        if subject.actual_space < subject.space:
             subject.actual_space = subject.actual_space + 1
             subject.save()
             sign.save()
@@ -58,7 +58,10 @@ def mySigns(request):
 
 @login_required(login_url='/account/login/')
 def singMeOut(request, sign_id):
-    sign = Sign.objects.all().filter(id=sign_id)
+    sign = get_object_or_404(Sign, id=sign_id)
+    sign.subject.actual_space = sign.subject.actual_space-1
+    sign.subject.save()
     sign.delete()
+
     return render(request, 'signs/sign_out.html', {'message': 'You have been signed out successfully'})
 
