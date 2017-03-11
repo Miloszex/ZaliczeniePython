@@ -30,6 +30,9 @@
         $(document).ready(function () {
             $('.subjectButton').click(function(){
                 var subjectId = $(this).attr('subjectId');
+                var button = $(this);
+                button.prop('disabled', true);
+                button.text("Wypisano!");
                 $.ajax({
                     url: 'http://localhost:8000/sign/signmeout/'+ subjectId
                 }).done(function(data){

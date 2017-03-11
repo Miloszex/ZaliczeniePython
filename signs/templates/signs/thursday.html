@@ -33,6 +33,9 @@
             $('.subjectButton').click(function(){
                 var day = $(this).attr('day');
                 var subjectId = $(this).attr('subjectId');
+                var button = $(this);
+                button.prop('disabled', true);
+                button.text("Zapisano!");
 
                 console.log('dzien: '+day+', id: '+subjectId)
 
