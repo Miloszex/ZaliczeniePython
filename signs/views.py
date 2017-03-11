@@ -38,8 +38,6 @@ def signMe(request, subject_id):
     try:
         sign.user = user
         sign.subject = subject
-    except Exception:
-        raise Exception
     finally:
         if subject.actual_space < subject.space:
             subject.actual_space = subject.actual_space + 1
