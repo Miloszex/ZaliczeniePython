@@ -4,12 +4,8 @@
     <list default="true" id="a7ba0ef8-e219-491e-afce-3c6d2f46a0a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/friday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/friday.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/monday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/monday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/my_signs.html" afterPath="$PROJECT_DIR$/signs/templates/signs/my_signs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/thursday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/thursday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/tuesday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/tuesday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/wednesday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/wednesday.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/views.py" afterPath="$PROJECT_DIR$/signs/views.py" />
     </list>
     <ignored path="Zaliczenie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,18 +32,18 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signs/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="375">
+              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monday.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="monday.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/signs/templates/signs/monday.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="73" column="37" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="37" />
+            <state relative-caret-position="189">
+              <caret line="62" column="95" selection-start-line="62" selection-start-column="95" selection-end-line="62" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -56,7 +52,7 @@
       <file leaf-file-name="friday.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signs/templates/signs/friday.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="525">
               <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding />
             </state>
@@ -66,7 +62,7 @@
       <file leaf-file-name="thursday.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signs/templates/signs/thursday.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="525">
               <caret line="35" column="37" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="37" />
               <folding />
             </state>
@@ -76,7 +72,7 @@
       <file leaf-file-name="tuesday.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signs/templates/signs/tuesday.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="525">
               <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding />
             </state>
@@ -86,17 +82,17 @@
       <file leaf-file-name="wednesday.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signs/templates/signs/wednesday.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="525">
               <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_signs.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="my_signs.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signs/templates/signs/my_signs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="480">
               <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding />
             </state>
@@ -146,13 +142,13 @@
         <option value="$PROJECT_DIR$/account/templates/base.html" />
         <option value="$PROJECT_DIR$/signs/urls.py" />
         <option value="$PROJECT_DIR$/signs/models.py" />
-        <option value="$PROJECT_DIR$/signs/views.py" />
-        <option value="$PROJECT_DIR$/signs/templates/signs/monday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/friday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/thursday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/tuesday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/wednesday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/my_signs.html" />
+        <option value="$PROJECT_DIR$/signs/views.py" />
+        <option value="$PROJECT_DIR$/signs/templates/signs/monday.html" />
       </list>
     </option>
   </component>
@@ -191,6 +187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,7 +244,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -550,7 +546,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19527897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20100144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -902,14 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signs/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/sign_out.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -918,17 +906,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signs/templates/signs/monday.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="73" column="37" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/friday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="525">
           <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
           <folding />
         </state>
@@ -936,7 +916,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/thursday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="525">
           <caret line="35" column="37" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="37" />
           <folding />
         </state>
@@ -944,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/tuesday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="525">
           <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding />
         </state>
@@ -952,7 +932,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/wednesday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="525">
           <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding />
         </state>
@@ -960,8 +940,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/my_signs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="480">
           <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signs/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signs/templates/signs/monday.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="62" column="95" selection-start-line="62" selection-start-column="95" selection-end-line="62" selection-end-column="95" />
           <folding />
         </state>
       </provider>

@@ -34,19 +34,24 @@ def signMe(request, subject_id):
     user = request.user
     subject = get_object_or_404(Subject, id=subject_id)
     sign = Sign()
+    user_is_participant = Sign.objects.filter(subject=subject_id, user=user).count() > 0
+
 
     try:
         sign.user = user
         sign.subject = subject
     finally:
         if subject.actual_space < subject.space:
-            subject.actual_space = subject.actual_space + 1
+            if not user_is_participant:
+                subject.actual_space = subject.actual_space + 1
+            else:
+                pass
             subject.save()
             sign.save()
         else:
             pass
 
-    return render(request, 'signs/sign_success.html', {'message': 'Success!'})
+    return render(request, 'signs/sign_success.html', {'user_is_participant': user_is_participant})
 
 @login_required(login_url='/account/login/')
 def mySigns(request):

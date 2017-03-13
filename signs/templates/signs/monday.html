@@ -60,7 +60,7 @@
         <td>{{ subject.begin_at }}</td>
         <td>{{ subject.end_at }}</td>
         <td> {{ subject.actual_space }}/{{ subject.space }}</td>
-        <td><button class="btn-success subjectButton" day="monday" subjectId="{{ subject.id }}"> Zapisz </button><br></td>
+        <td><button class="btn-success subjectButton" day="monday" {% if user_is_participant > 0 %} disabled {% endif %} subjectId="{{ subject.id }}"> Zapisz </button><br></td>
     </tbody>
 {% endfor %}
 
