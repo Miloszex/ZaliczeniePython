@@ -99,6 +99,7 @@ def signMe(request, subject_id):
 
     user = request.user
     subject = get_object_or_404(Subject, id=subject_id)
+    user_is_principant = Sign.objects.all().filter(subject=subject, user=user).exists()
     sign = Sign()
 
 
@@ -107,7 +108,10 @@ def signMe(request, subject_id):
         sign.subject = subject
     finally:
         if subject.actual_space < subject.space:
-            subject.actual_space = subject.actual_space + 1
+            if user_is_principant == False:
+                subject.actual_space = subject.actual_space + 1
+            else:
+                pass
             subject.save()
             sign.save()
         else:
