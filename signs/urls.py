@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^monday/signme/(?P<subject_id>[0-9]+)/$', views.signMe, name='signMe'),
     url(r'^tuesday/signme/(?P<subject_id>[0-9]+)/$', views.signMe, name='signMe'),
     url(r'^wednesday/signme/(?P<subject_id>[0-9]+)/$', views.signMe, name='signMe'),
-    url(r'^thursday/signme/(?P<subject_id>[0-9]+/)$', views.signMe, name='signMe'),
-    url(r'^friday/signme/(?P<subject_id>[0-9]+/)$', views.signMe, name='signMe'),
-    url(r'signmeout/(?P<sign_id>[0-9]+)/' , views.singMeOut, name='singmeout'),
+    url(r'^thursday/signme/(?P<subject_id>[0-9]+)/$', views.signMe, name='signMe'),
+    url(r'^friday/signme/(?P<subject_id>[0-9]+)/$', views.signMe, name='signMe'),
+    url(r'signmeout/(?P<sign_id>[0-9]+)/$', views.singMeOut, name='singmeout'),
 ]
