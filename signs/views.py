@@ -75,7 +75,7 @@ def showThursdayTable(request):
     except:
         pass
 
-    return render(request, 'signs/thursday.html.html', {'subjects': subjects, 'participation': subjects_participation})
+    return render(request, 'signs/thursday.html', {'subjects': subjects, 'participation': subjects_participation})
 
 def showFridayTable(request):
     user = request.user
