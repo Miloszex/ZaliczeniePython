@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -- coding: utf-8 --
+
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
@@ -20,7 +23,7 @@ def showMondayTable(request):
             if Sign.objects.all().filter(subject=object.id, user=user).exists():
                 subjects_participation[object.id] = {'state': 'disabled', 'text': 'Zapisano'}
             else:
-                subjects_participation[object.id] = {'state': '', 'text': 'Zapisz się'}
+                subjects_participation[object.id] = {'state': ' ', 'text': 'Zapisz się'}
     except:
         pass
 
