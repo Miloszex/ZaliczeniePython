@@ -3,13 +3,28 @@ from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from django.core.exceptions import MultipleObjectsReturned
 from .models import User, Subject, Sign
+from django.http import HttpResponse
+import json
+
 
 def index(request):
     return render(request,'signs/index.html')
 
 def showMondayTable(request):
+    user = request.user
     subjects = Subject.objects.all().filter(day=1)
-    return render(request, 'signs/monday.html', {'subjects':subjects})
+    subjects_participation = {}
+
+    try:
+        for object in Subject.objects.all():
+            if Sign.objects.all().filter(subject=object.id, user=user).exists():
+                subjects_participation[object.id] = {'state': 'disabled', 'text': 'Zapisano'}
+            else:
+                subjects_participation[object.id] = {'state': '', 'text': 'Zapisz się'}
+    except:
+        pass
+
+    return render(request, 'signs/monday.html', {'subjects':subjects, 'participation':subjects_participation})
 
 def showTuesdayTable(request):
     subjects = Subject.objects.all().filter(day=2)
@@ -34,7 +49,6 @@ def signMe(request, subject_id):
     user = request.user
     subject = get_object_or_404(Subject, id=subject_id)
     sign = Sign()
-    user_is_participant = Sign.objects.filter(subject=subject_id, user=user).exists()
 
 
     try:
@@ -42,16 +56,18 @@ def signMe(request, subject_id):
         sign.subject = subject
     finally:
         if subject.actual_space < subject.space:
-            if user_is_participant == False:
-                subject.actual_space = subject.actual_space + 1
-            else:
-                pass
+            subject.actual_space = subject.actual_space + 1
             subject.save()
             sign.save()
         else:
             pass
 
-    return render(request, 'signs/sign_success.html', {'user_is_participant': user_is_participant})
+    if Sign.objects.all().filter(subject=subject.id, user=user).exists():
+        response = {'answer': 'Pomyślnie zapisano'}
+    else:
+        response = {'answer': 'Nie udało się zapisać'}
+
+    return HttpResponse(json.dumps(response), content_type='application/json')
 
 @login_required(login_url='/account/login/')
 def mySigns(request):
@@ -67,4 +83,3 @@ def singMeOut(request, sign_id):
     sign.delete()
 
     return render(request, 'signs/sign_out.html', {'message': 'You have been signed out successfully'})
-
