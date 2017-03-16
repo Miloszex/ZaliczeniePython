@@ -30,20 +30,68 @@ def showMondayTable(request):
     return render(request, 'signs/monday.html', {'subjects':subjects, 'participation':subjects_participation})
 
 def showTuesdayTable(request):
+    user = request.user
     subjects = Subject.objects.all().filter(day=2)
-    return render(request, 'signs/tuesday.html', {'subjects':subjects})
+    subjects_participation = {}
+
+    try:
+        for object in Subject.objects.all():
+            if Sign.objects.all().filter(subject=object.id, user=user).exists():
+                subjects_participation[object.id] = {'state': 'disabled', 'text': 'Zapisano'}
+            else:
+                subjects_participation[object.id] = {'state': ' ', 'text': 'Zapisz się'}
+    except:
+        pass
+
+    return render(request, 'signs/tuesday.html', {'subjects': subjects, 'participation': subjects_participation})
 
 def showWednesdayTable(request):
+    user = request.user
     subjects = Subject.objects.all().filter(day=3)
-    return render(request, 'signs/wednesday.html', {'subjects': subjects})
+    subjects_participation = {}
+
+    try:
+        for object in Subject.objects.all():
+            if Sign.objects.all().filter(subject=object.id, user=user).exists():
+                subjects_participation[object.id] = {'state': 'disabled', 'text': 'Zapisano'}
+            else:
+                subjects_participation[object.id] = {'state': ' ', 'text': 'Zapisz się'}
+    except:
+        pass
+
+    return render(request, 'signs/wednesday.html', {'subjects': subjects, 'participation': subjects_participation})
 
 def showThursdayTable(request):
+    user = request.user
     subjects = Subject.objects.all().filter(day=4)
-    return render(request, 'signs/thursday.html', {'subjects': subjects})
+    subjects_participation = {}
+
+    try:
+        for object in Subject.objects.all():
+            if Sign.objects.all().filter(subject=object.id, user=user).exists():
+                subjects_participation[object.id] = {'state': 'disabled', 'text': 'Zapisano'}
+            else:
+                subjects_participation[object.id] = {'state': ' ', 'text': 'Zapisz się'}
+    except:
+        pass
+
+    return render(request, 'signs/thursday.html.html', {'subjects': subjects, 'participation': subjects_participation})
 
 def showFridayTable(request):
+    user = request.user
     subjects = Subject.objects.all().filter(day=5)
-    return render(request, 'signs/friday.html', {'subjects': subjects})
+    subjects_participation = {}
+
+    try:
+        for object in Subject.objects.all():
+            if Sign.objects.all().filter(subject=object.id, user=user).exists():
+                subjects_participation[object.id] = {'state': 'disabled', 'text': 'Zapisano'}
+            else:
+                subjects_participation[object.id] = {'state': ' ', 'text': 'Zapisz się'}
+    except:
+        pass
+
+    return render(request, 'signs/friday.html', {'subjects': subjects, 'participation': subjects_participation})
 
 
 @login_required(login_url='/account/login/')

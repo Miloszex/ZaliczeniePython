@@ -22,9 +22,16 @@
         <td>{{ subject.begin_at }}</td>
         <td>{{ subject.end_at }}</td>
         <td> {{ subject.actual_space }}/{{ subject.space }}</td>
-        <td><button class="btn-success subjectButton" day="tuesday" subjectId="{{ subject.id }}"> Zapisz </button><br></td>
+        <td><button class="btn-success subjectButton" day="tuesday" subjectId="{{ subject.id }}"
+			{% for key, value in participation.items %}
+				{% if key == subject.id %}
+					{{value.state}}>{{value.text}}
+				{% endif %}
+			{% endfor %}
+		</button><br></td>
     </tbody>
 {% endfor %}
+
 
     </table>
     <script>
@@ -34,19 +41,20 @@
                 var day = $(this).attr('day');
                 var subjectId = $(this).attr('subjectId');
                 var button = $(this);
-                button.prop('disabled', true);
-                button.text("Zapisano!");
-                console.log('dzien: '+day+', id: '+subjectId)
 
                 $.ajax({
                     url: 'http://localhost:8000/sign/'+day+'/signme/'+subjectId
                 }).done(function(data){
-                    console.log('subject send');
-                    console.log('recived data: '+ JSON.stringify(data));
+					if (data.answer == 'Pomyślnie zapisano') {
+						button.prop('disabled', true);
+						button.text("Zapisano!");
+					} else {
+						alert(data.answer);
+					}
                 });
 
-            })
-        })
+            });
+        });
 
 
 </script>
