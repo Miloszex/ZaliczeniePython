@@ -15,7 +15,10 @@ def index(request):
 
 def showMondayTable(request):
     user = request.user
-    subjects = Subject.objects.all().filter(day=1)
+    if request.user.is_authenticated():
+        subjects = Subject.objects.all().filter(day=1, year=request.user.extendeduser.year)
+    else:
+        subjects = Subject.objects.all().filter(day=1, year=0)
     subjects_participation = {}
 
     try:
@@ -31,7 +34,10 @@ def showMondayTable(request):
 
 def showTuesdayTable(request):
     user = request.user
-    subjects = Subject.objects.all().filter(day=2)
+    if request.user.is_authenticated():
+        subjects = Subject.objects.all().filter(day=2, year=request.user.extendeduser.year)
+    else:
+        subjects = Subject.objects.all().filter(day=2, year=0)
     subjects_participation = {}
 
     try:
@@ -47,7 +53,10 @@ def showTuesdayTable(request):
 
 def showWednesdayTable(request):
     user = request.user
-    subjects = Subject.objects.all().filter(day=3)
+    if request.user.is_authenticated():
+        subjects = Subject.objects.all().filter(day=3, year=request.user.extendeduser.year)
+    else:
+        subjects = Subject.objects.all().filter(day=3, year=0)
     subjects_participation = {}
 
     try:
@@ -63,7 +72,10 @@ def showWednesdayTable(request):
 
 def showThursdayTable(request):
     user = request.user
-    subjects = Subject.objects.all().filter(day=4)
+    if request.user.is_authenticated():
+        subjects = Subject.objects.all().filter(day=4, year=request.user.extendeduser.year)
+    else:
+        subjects = Subject.objects.all().filter(day=4, year=0)
     subjects_participation = {}
 
     try:
@@ -79,7 +91,10 @@ def showThursdayTable(request):
 
 def showFridayTable(request):
     user = request.user
-    subjects = Subject.objects.all().filter(day=5)
+    if request.user.is_authenticated():
+        subjects = Subject.objects.all().filter(day=5, year=request.user.extendeduser.year)
+    else:
+        subjects = Subject.objects.all().filter(day=5, year=0)
     subjects_participation = {}
 
     try:

@@ -12,12 +12,23 @@ class Subject(models.Model):
         (4, 'Thursday'),
         (5, 'Friday'),
     )
+
+    YEAR_CHOICE = (
+        (0, 'undefined'),
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    )
+
     name = models.CharField(max_length=150)
     day = models.IntegerField(choices=DAY_CHOICE)
     begin_at = models.TimeField(blank=True)
     end_at = models.TimeField(blank=True)
     actual_space = models.IntegerField(default=0)
     space = models.IntegerField(default=0)
+    year = models.IntegerField(choices=YEAR_CHOICE, default=0)
 
     def __str__(self):
         return self.name + ' - ' + str(self.day) + ' ' + str(self.begin_at) + '-' + str(self.end_at)
