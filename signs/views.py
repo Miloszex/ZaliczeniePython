@@ -3,8 +3,6 @@
 
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.db import IntegrityError
-from django.core.exceptions import MultipleObjectsReturned
 from .models import User, Subject, Sign
 from django.http import HttpResponse
 import json
