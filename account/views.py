@@ -1,7 +1,9 @@
-from django.shortcuts import render
-from .forms import UserRegistrationForm, UserLoginForm
+from django.shortcuts import render ,redirect
+from .forms import UserRegistrationForm, UserLoginForm, ExtendedUserInformationForm
+from .models import ExtendedUser
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as auth_login
+from django.contrib.auth.decorators import login_required
 
 
 def register(request):
@@ -12,7 +14,11 @@ def register(request):
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
             user.save()
-            return render(request, 'account/register_completed.html',{'user':user})
+            ExtendedUser.objects.create(user=user)
+
+            auth_login(request, user)
+            #return render(request, 'account/login_success.html', {'user':user})
+            return redirect('/account/extend/')
     else:
         form = UserRegistrationForm()
 
@@ -41,3 +47,17 @@ def login(request):
 def logout_user(request):
     logout(request)
     return render(request, 'account/logout.html', {'message':'You have been logged out successfully'})
+
+@login_required(login_url='/account/login/')
+def extend_profile(request):
+    user = request.user
+    if request.method == 'POST':
+        form = ExtendedUserInformationForm(request.POST,instance=request.user.extendeduser)
+        if form.is_valid():
+            form.save()
+        return render(request, 'account/login_success.html', {'user': user})
+    else:
+        form = ExtendedUserInformationForm()
+
+    return render(request, 'account/extend_information.html', {'form': form})
+

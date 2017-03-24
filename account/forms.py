@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django import forms
+from .models import ExtendedUser
 from django.core import validators
 from django.forms import ModelForm
 
@@ -17,6 +18,11 @@ class UserRegistrationForm(forms.ModelForm):
         if self.cleaned_data['password'] != self.cleaned_data['repeat_password']:
             raise validators.ValidationError('Passwords arent the same!')
         return self.cleaned_data['repeat_password']
+
+class ExtendedUserInformationForm(forms.ModelForm):
+    class Meta:
+        model = ExtendedUser
+        fields = ['index_number', 'year']
 
 class UserLoginForm(forms.Form):
     username = forms.CharField(label="Username:")
