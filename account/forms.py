@@ -17,9 +17,12 @@ class UserRegistrationForm(forms.ModelForm):
 
         if self.cleaned_data['password'] != self.cleaned_data['repeat_password']:
             raise validators.ValidationError('Passwords arent the same!')
-        return self.repeat_password
+        return self.cleaned_data['password']
 
 class ExtendedUserInformationForm(forms.ModelForm):
+
+    index_number = forms.CharField(label='index_number', required=True)
+
     class Meta:
         model = ExtendedUser
         fields = ['index_number', 'year']

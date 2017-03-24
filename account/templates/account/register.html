@@ -11,7 +11,7 @@
                                     <div class="alert alert-danger"> {{ field.errors }}</div>
                                 {% endif %}
                                 {% csrf_token %}
-                                {{ field.label }}: {{ field }} <br>
+                            <b>{{ field.label }}:</b> {{ field }} <br>
 
                         {% endfor %}
 
