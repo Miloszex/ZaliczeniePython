@@ -13,11 +13,11 @@ class UserRegistrationForm(forms.ModelForm):
         model = User
         fields = ['username', 'first_name', 'last_name', 'email']
 
-    def clean_rep_pass(self):
+    def clean_repeat_password(self):
 
         if self.cleaned_data['password'] != self.cleaned_data['repeat_password']:
             raise validators.ValidationError('Passwords arent the same!')
-        return self.cleaned_data['repeat_password']
+        return self.repeat_password
 
 class ExtendedUserInformationForm(forms.ModelForm):
     class Meta:
