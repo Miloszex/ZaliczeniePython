@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a7ba0ef8-e219-491e-afce-3c6d2f46a0a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/static/account/style.css" afterPath="$PROJECT_DIR$/account/static/account/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/templates/base.html" afterPath="$PROJECT_DIR$/account/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/friday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/friday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/monday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/monday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/thursday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/thursday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/tuesday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/tuesday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/wednesday.html" afterPath="$PROJECT_DIR$/signs/templates/signs/wednesday.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signs/templates/signs/my_signs.html" afterPath="$PROJECT_DIR$/signs/templates/signs/my_signs.html" />
     </list>
     <ignored path="Zaliczenie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +42,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/static/account/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+            <state relative-caret-position="90">
+              <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_signs.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/signs/templates/signs/my_signs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -55,8 +62,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="83" lean-forward="false" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+            <state relative-caret-position="234">
+              <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -112,7 +119,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wednesday.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wednesday.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signs/templates/signs/wednesday.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -156,7 +163,6 @@
         <option value="$PROJECT_DIR$/account/templates/account/login_error.html" />
         <option value="$PROJECT_DIR$/account/templates/account/login.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/tursday.html" />
-        <option value="$PROJECT_DIR$/signs/templates/signs/my_signs.html" />
         <option value="$PROJECT_DIR$/signs/urls.py" />
         <option value="$PROJECT_DIR$/account/forms.py" />
         <option value="$PROJECT_DIR$/account/admin.py" />
@@ -169,13 +175,14 @@
         <option value="$PROJECT_DIR$/signs/models.py" />
         <option value="$PROJECT_DIR$/signs/views.py" />
         <option value="$PROJECT_DIR$/signs/templates/signs/index.html" />
-        <option value="$PROJECT_DIR$/account/static/account/style.css" />
-        <option value="$PROJECT_DIR$/account/templates/base.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/monday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/friday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/thursday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/tuesday.html" />
         <option value="$PROJECT_DIR$/signs/templates/signs/wednesday.html" />
+        <option value="$PROJECT_DIR$/account/templates/base.html" />
+        <option value="$PROJECT_DIR$/account/static/account/style.css" />
+        <option value="$PROJECT_DIR$/signs/templates/signs/my_signs.html" />
       </list>
     </option>
   </component>
@@ -264,7 +271,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="mond&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/signs/templates/signs/monday.html&#10;base&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/templates/base.html&#10;model&#9;null&#9;null&#10;view&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/views.py&#10;mode&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/models.py&#10;url&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/urls.py&#10;reg&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/templates/account/register.html&#10;vie&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/signs/views.py&#10;admin&#9;null&#9;null&#10;login&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/templates/account/login_success.html&#10;form&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/forms.py&#10;urls&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython/signs/urls.py&#10;mon&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython/signs/templates/signs/monday.html&#10;monday&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython-master/signs/templates/signs/monday.html&#10;set&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython/Zaliczenie/settings.py&#10;sub&#9;null&#9;null&#10;ad&#9;null&#9;null&#10;adm&#9;null&#9;null&#10;sett&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="mysi&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/signs/templates/signs/my_signs.html&#10;mond&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/signs/templates/signs/monday.html&#10;base&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/templates/base.html&#10;model&#9;null&#9;null&#10;view&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/views.py&#10;mode&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/models.py&#10;url&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/urls.py&#10;reg&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/templates/account/register.html&#10;vie&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/signs/views.py&#10;admin&#9;null&#9;null&#10;login&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/templates/account/login_success.html&#10;form&#9;FILE&#9;file:///home/miloszex/Programowanie/ZaliczeniePython/account/forms.py&#10;urls&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython/signs/urls.py&#10;mon&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython/signs/templates/signs/monday.html&#10;monday&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython-master/signs/templates/signs/monday.html&#10;set&#9;FILE&#9;file:///Users/macbook/Desktop/ZaliczeniePython/Zaliczenie/settings.py&#10;sub&#9;null&#9;null&#10;ad&#9;null&#9;null&#10;adm&#9;null&#9;null&#10;sett&#9;null&#9;null" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -789,14 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signs/templates/signs/my_signs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/templates/account/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -906,30 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/static/account/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="83" lean-forward="false" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signs/templates/signs/monday.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -963,6 +938,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/signs/templates/signs/wednesday.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/static/account/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signs/templates/signs/monday.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signs/templates/signs/my_signs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
