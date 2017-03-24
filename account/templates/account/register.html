@@ -4,14 +4,14 @@
     <div id="register">
         <div class="panel panel-primary">
             <div class="panel-heading">Register:</div>
-                <div class="panel-body">
+                <div class="panel-body" id="panel_body_inside">
                     <form action="." method="post" class="form-horizontal">
                         {% for field in form %}
                                 {% if field.errors %}
                                     <div class="alert alert-danger"> {{ field.errors }}</div>
                                 {% endif %}
                                 {% csrf_token %}
-                            <b>{{ field.label }}:</b> {{ field }} <br>
+                            <b>{{ field.label }}:</b> {{ field }} <br> <br>
 
                         {% endfor %}
 

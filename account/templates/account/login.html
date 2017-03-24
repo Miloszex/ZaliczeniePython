@@ -4,7 +4,7 @@
     <div id="login">
         <div class="panel panel-primary">
             <div class="panel-heading">Login:</div>
-                <div class="panel-body">
+                <div class="panel-body" id="panel_body_inside">
                     <form method="post" action=".">
                         {% csrf_token %}
                         {{ form.as_p }}

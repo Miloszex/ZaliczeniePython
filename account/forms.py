@@ -17,7 +17,7 @@ class UserRegistrationForm(forms.ModelForm):
 
         if self.cleaned_data['password'] != self.cleaned_data['repeat_password']:
             raise validators.ValidationError('Passwords arent the same!')
-        return self.cleaned_data['password']
+        return False
 
 class ExtendedUserInformationForm(forms.ModelForm):
 
