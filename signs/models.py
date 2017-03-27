@@ -41,6 +41,7 @@ class Sign(models.Model):
 
     class Meta:
         unique_together = ('subject', 'user')
+        ordering = ['subject__day']
 
     def __str__(self):
         return self.user.extendeduser.index_number + ' ' + self.user.first_name + ' '+ self.user.last_name + ' - ' + self.subject.name + ' ' + str(self.subject.begin_at) +':'+ str(self.subject.end_at)
