@@ -30,6 +30,9 @@ class Subject(models.Model):
     space = models.IntegerField(default=0)
     year = models.IntegerField(choices=YEAR_CHOICE, default=0)
 
+    class Meta:
+        ordering = ['begin_at']
+
     def __str__(self):
         return self.name + ' - ' + str(self.day) + ' ' + str(self.begin_at) + '-' + str(self.end_at)
 
@@ -41,7 +44,7 @@ class Sign(models.Model):
 
     class Meta:
         unique_together = ('subject', 'user')
-        ordering = ['subject__day']
+        ordering = ['user__extendeduser__index_number', 'subject__day']
 
     def __str__(self):
         return self.user.extendeduser.index_number + ' ' + self.user.first_name + ' '+ self.user.last_name + ' - ' + self.subject.name + ' ' + str(self.subject.begin_at) +':'+ str(self.subject.end_at)
